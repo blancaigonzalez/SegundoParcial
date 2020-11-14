@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumnos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <script src="JS/Script.js"></script>
+  <meta http-equiv='Content-Type' content='Type=text/html; charset=utf-8'>
+</head>
+
+<body style="text-align: center;">
+  <p>Nombre: Blanca Itzel Gonzalez Guevara</p>
+  <p>Numero De Control: 16220014</p>
+  <p>Semestre: 9</p>
+  <p>Carrera: Ingenieria Informatica</p>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+
+        <div class="row justify-content-end pb-2">
+          <div class="col-md-2">
+            <button class="btn btn-success btn-block" onClick="obtenerAlumnos();">
+                Recargar Alumnos
+            </button>
+          </div>
+          <div class="col-md-4">
+            <input type="text" class='form-control' id='matricula' placeholder="ingresar matricula">
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-info btn-block" onClick="buscarAlumno();">
+                Buscar
+            </button>
+          </div>
+        </div>
+
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Matricula</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">CURP</th>
+              <th scope="col">CORREO</th>
+              <th scope="col">SEXO</th>
+              <th scope="col">CIUDAD</th>
+              <th scope="col">VER</th>
+            </tr>
+          </thead>
+          <tbody id='cuerpotabla'>
+
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+      obtenerAlumnos();  
+  </script>
+
+
+</body>
+
+</html>
